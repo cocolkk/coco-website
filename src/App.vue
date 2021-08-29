@@ -1,118 +1,116 @@
 <template>
   <div id="app">
     <div class="wrapper">
-      <ul class="toolbarUl">
-        <router-link :to="{ path: 'HomePage'}" tag="li">
+      <div class="toolbarUl">
+        <router-link :to="{ path: 'HomePage' }">
           <span>首页</span>
         </router-link>
-        <router-link :to="{ path: 'LivePage'}" tag="li">
+        <router-link :to="{ path: 'LivePage' }">
           <span>生活</span>
         </router-link>
-        <router-link :to="{ path: 'StudyPage'}" tag="li">
+        <router-link :to="{ path: 'StudyPage' }">
           <span>学习</span>
         </router-link>
-      </ul>
-    </div>
-    <router-view/>
-    <div class="footer">
-      <p>{{$store.state.title}}</p>
+      </div>
     </div>
     <div class="footer" style="">
-          <p class="pBei">
-            <span>
-              <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802033528">
-                <img src="./assets/police.png" style="float:left;"/>
-                京公网安备 11010802033528号 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </a>
-            </span>
-            <a target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index">
-              工信部备案 京ICP备2020040756号-1
-            </a>
-          </p>
+      <div class="BeiAn">
+        <span>
+          <a
+            target="_blank"
+            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802033528"
+          >
+            <img src="./assets/police.png" style="float:left;" />
+            京公网安备 11010802033528号 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </a>
+        </span>
+        <a target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index">
+          工信部备案 京ICP备2020040756号-1
+        </a>
+      </div>
     </div>
+    <router-view />
   </div>
-
 </template>
 
 <script>
 export default {
-  name: 'App',
-}
+  name: "App"
+};
 </script>
 
 <style>
-
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  /* font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  /*top: 0;*/
-  /*right: 0;*/
-  /*bottom: 0;*/
-  /*left: 0;*/
+  -moz-osx-font-smoothing: grayscale; */
+  /* text-align: center; */
 }
 
-html,body {
+html {
+  /* width: 100%; */
   height: 100%;
-  background-color: #f2fcbb;
+  /* display: flex; */
+}
+body {
+  /* height: 100%; */
+  /* width: 100%; */
+  /* background-color: #f2fcbb; */
+  margin: 0;
+}
+
+@media screen and (max-width: 750px) {
+  body {
+    background-color: lightblue;
+  }
 }
 
 .wrapper {
   display: flex;
-  height: 30px;
+  /* height: 30px; */
   flex-direction: column;
-  margin-text-outline: 0;
   min-height: 100%;
   top: 0;
 }
 
-/*p {*/
-/*  color: #050505;*/
-/*  text-align: center;*/
-/*}*/
-
-/*span {*/
-/*  text-align: left;*/
-/*}*/
+span {
+  cursor: pointer;
+}
 
 .toolbarUl {
   background-color: #d2e28e;
-  height: 30px;
-  width: 100%;
+  font-size: 20px;
   margin-top: 0;
-  /*margin-bottom: 0;*/
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  /*justify-content: space-between;*/
+  justify-content: space-around;
 }
 
-.toolbarUl>li{
-  height: 100%;
-  width: 30%;
+.toolbarUl > li {
+  /* height: 100%; */
+  /* width: 30%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.pBei {
-  height: 20px;
-  line-height: 20px;
-  margin: 0px 0px 0px 5px;
-
+.BeiAn {
+  /* height: 20px; */
+  /* line-height: 20px; */
+  /* margin: 0px 0px 0px 5px; */
+  display: flex;
+  justify-content: center;
 }
 
 p {
   color: white;
 }
 
-.pBei a {
-  display:inline-block;
-  text-decoration:none;
-  height:20px;
-  line-height:20px;
+.BeiAn a {
+  display: inline-block;
+  text-decoration: none;
+  height: 20px;
+  line-height: 20px;
   color: white;
 }
 
@@ -120,8 +118,8 @@ p {
   position: fixed;
   width: 100%;
   bottom: 0;
-  margin:0 auto;
-  padding: 15px 0;
+  margin: 0 auto;
+  padding: 10px 0;
   background-color: #393939;
 }
 </style>
