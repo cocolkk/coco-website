@@ -8,6 +8,9 @@ import LivePage from "../components/LivePage";
 import StudyPage from "../components/StudyPage";
 import ParentPages from "../pages/study_pages/vue_computed/ParentPages";
 import ChildPage from "../pages/study_pages/vue_computed/ChildPage";
+import login from "../pages/login";
+import home from "../pages/home";
+import FootBar from "../components/FootBar"
 
 // study pages
 import VueDemo from "../pages/study_pages/VueDemo";
@@ -17,6 +20,7 @@ import PassValue from "../pages/study_pages/pass_value/PassValue";
 Vue.use(Router)
 
 export default new Router({
+  mode:'history',   //去除#号
   routes: [
     {
       path: '/App',
@@ -26,8 +30,15 @@ export default new Router({
 
     {
       path: '/',
-      redirect: '/HomePage',
+      redirect: '/login',
     },
+
+    {
+      path: '/login',
+      name: 'login',
+      component: login
+    },
+
 
     {
       path: '/HomePage',
@@ -74,6 +85,17 @@ export default new Router({
       path: '/ChildPage',
       name: 'ChildPage',
       component: ChildPage
+    },
+    {
+      path: '/home',
+      name: 'home',
+      component: home
+    },
+    {
+      path: '/FootBar',
+      name: 'FootBar',
+      component: FootBar
+      
     }
 
   ]

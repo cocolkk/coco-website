@@ -1,5 +1,14 @@
 <template>
   <div class="div2">
+    <router-link :to="{ path: 'HomePage' }">
+      <span>首页</span>
+    </router-link>
+    <router-link :to="{ path: 'LivePage' }">
+      <span>生活</span>
+    </router-link>
+    <router-link :to="{ path: 'StudyPage' }">
+      <span>学习</span>
+    </router-link>
     <!-- <h2>{{ $store.state.name }}</h2> -->
     <!-- <div class="banner" v-on:mouseover="stop()" v-on:mouseleave="move()">
       <div>
@@ -116,12 +125,11 @@ export default {
 };
 </script>
 
-<style scoped>
-* {
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-}
+<style scoped lang="less">
+// * {
+//   margin: 0;
+//   padding: 0;
+// }
 
 ul li {
   list-style: none;
