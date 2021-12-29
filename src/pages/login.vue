@@ -1,8 +1,6 @@
 <template>
   <div class="login">
-    <div class="login-img">
-      <hh></hh>
-    </div>
+    <div class="login-img"></div>
     <div class="login-input">
       <div>
         <input v-model="username" type="text" />
