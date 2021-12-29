@@ -21,13 +21,13 @@ export default {
   data() {
     return {
       username: "",
-      password: ""
+      password: "",
     };
   },
   methods: {
     login() {},
-    logout() {}
-  }
+    logout() {},
+  },
 };
 </script>
 <style scoped lang="less">
@@ -38,7 +38,7 @@ body {
 .login {
   display: flex;
   // height: 100vh;
-  background: rgb(255, 255, 11);
+  background: rgb(248, 248, 248);
 }
 .login-img {
   flex: 2;

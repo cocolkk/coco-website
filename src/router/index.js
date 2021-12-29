@@ -20,7 +20,7 @@ import PassValue from "../pages/study_pages/pass_value/PassValue";
 Vue.use(Router)
 
 export default new Router({
-  mode:'history',   //去除#号
+  mode: 'history',   //去除#号
   routes: [
     {
       path: '/App',
@@ -30,7 +30,7 @@ export default new Router({
 
     {
       path: '/',
-      redirect: '/login',
+      redirect: '/home',
     },
 
     {
@@ -95,7 +95,7 @@ export default new Router({
       path: '/FootBar',
       name: 'FootBar',
       component: FootBar
-      
+
     }
 
   ]
